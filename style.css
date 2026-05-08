@@ -1,1 +1,28 @@
+ /* Dark Mode detection */
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: white;
+                filter: blur(10px);
+                pointer-events: none;
+            }
+            .warning {
+                display: block;
+                filter: none;
+                color: red;
+                text-align: center;
+                font-size: 24px;
+                padding-top: 20%;
+                pointer-events: all;
+            }
+        }
 
+        /* Keigoshoki standard Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+                filter: none;
+            }
+        }
+    </style>
+</head>
