@@ -1,28 +1,56 @@
-/* Dark Mode detection */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: white;
-    filter: blur(10px); /* The visual softlock */
-    pointer-events: none; /* Stops clicking */
-  }
-  .warning {
-    display: block;
-    filter: none;
-    color: red;
-    text-align: center;
-    font-size: 24px;
-    padding-top: 20%;
-  }
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Keigoshoki Dictionary (敬初)</title>
+    <style>
+        /* This hides the warning by default */
+        .warning { display: none; }
 
-/* Keigoshoki standard Dark Mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #e0e0e0;
-    filter: none;
-  }
-}
+        /* Dark Mode detection */
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: white;
+                filter: blur(10px);
+                pointer-events: none;
+            }
+            .warning {
+                display: block;
+                filter: none;
+                color: red;
+                text-align: center;
+                font-size: 24px;
+                padding-top: 20%;
+                pointer-events: all;
+            }
+        }
+
+        /* Keigoshoki standard Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+                filter: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="warning">
+        Sorry, please fix your theme. The extension will not work in English or Japanese if dark mode is not turned on.
+    </div>
+
+    <h1>
+        <ruby>敬語 <rp>(</rp><rt>けいご</rt><rp>)</rp></ruby> 
+        <ruby>初期 <rp>(</rp><rt>しょき</rt><rp>)</rp></ruby>
+    </h1>
+    
+    <p>Welcome to the 敬初 (Keisho) project.</p>
+
+</body>
+</html>
+
 <p>
   <ruby>敬語 <rp>(</rp><rt>けいご</rt><rp>)</rp></ruby> 
   <ruby>初期 <rp>(</rp><rt>しょき</rt><rp>)</rp></ruby>
